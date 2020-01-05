@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit', (e) => {
   messThree.textContent = ''
 
 
-  const url = 'http://localhost:3000/weather?address=' + value
+  const url = 'weather?address=' + value
   // http request on client side
   fetch(url).then((response) => {
     response.json().then((data) => {

@@ -7,6 +7,8 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
+
 const htmlPath = path.join(__dirname, '../public')
 // hbs is looking for file named views in the root directory
 // this way we can change the name of the directory and still
@@ -100,6 +102,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(3000, () => {
-  console.log('server is up on port 3000.')
+app.listen(port, () => {
+  console.log('server is up on port ' + port + '.')
 })
